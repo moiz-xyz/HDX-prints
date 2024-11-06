@@ -28,6 +28,8 @@ body {
     align-items: center;
     padding: 10px;
     background-color: #f8f8f8;
+    position: fixed;
+    width: 100%;
 }
 
 .logo img {
@@ -140,7 +142,7 @@ body {
 .text h1 {
     font-size: 50px;
     font-weight: bolder;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .text p {
@@ -158,6 +160,7 @@ body {
 
 .boy {
     width: 50%;
+    margin-top: 100px;
 }
 
 .boy img {
