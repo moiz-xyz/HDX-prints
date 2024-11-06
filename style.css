@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Main structure */
+.main {
+    width: 100%;
+}
+.lists>ul>li>b{
+    color: red;
+}
+#bars {
+    display: none;
+}
+#add{
+    display: none;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.lists {
+    display: flex;
+    gap: 20px;
+}
+
+.lists ul {
+    display: flex;
+    gap: 20px;
+}
+
+.lists ul li {
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.lists-mobile {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease-in-out;  /* Slide effect */
+    display:flex    ;
+    flex-direction: column;
+    padding-top: 60px; /* Give space for the hamburger icon */
+    z-index: 999;
+}
+
+.lists-mobile ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lists-mobile ul li {
+    padding: 15px;
+    text-align: left;
+    color: white; /* Add text color for items */
+}
+
+.lists-mobile ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: red;
+}
+
+.cart i {
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.cart h6 {
+    font-size: 20px;
+}
+
+/* Bill Section */
+.bill {
+    display: none;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bill p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#cross {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    position: absolute;
+    top: 1%;
+    left: 90%;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 5%;
+}
+
+.text {
+    width: 50%;
+}
+
+.text h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 100px;
+}
+
+.text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.text button {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.boy {
+    width: 50%;
+}
+
+.boy img {
+    width: 100%;
+}
+
+/* Featured Products Section */
+.h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.products div {
+    width: 22%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.products img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.products p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.products button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+}
+
+.footer div {
+    width: 30%;
+    font-size: 16px;
+}
+
+.footer div li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.footer i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .lists {
+        display: none;
+    }
+    .lists-mobile {
+        position: fixed;
+        top: 0;
+        left: -250px;  /* Initially hidden off-screen */
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        transition: left 0.3s ease-in-out;  /* Slide effect */
+        display:block;
+        flex-direction: column;
+        padding-top: 60px; /* Give space for the hamburger icon */
+        z-index: 999;
+    }
+    
+    .lists-mobile ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .lists-mobile ul li {
+        padding: 15px;
+        text-align: left;
+        color: white; /* Add text color for items */
+    }
+    
+    .lists-mobile ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+    }
+    
+    /* When 'open' class is added, move the menu into view */
+    .lists-mobile.open {
+        left: 0;
+    }
+    
+    #bars {
+        cursor: pointer;
+        font-size: 24px;
+        color: #333;
+        padding: 10px;
+    }
+    
+    
+    
+        .cart {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        width: 90%;
+        text-align: center;
+    }
+    .text h1 {
+        font-size: 50px;
+        font-weight: bolder;
+        margin-top: 10px;
+    }
+    .boy {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+#bars{
+    display: block;
+    font-size: x-large;
+}
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer i {
+        font-size: 20px;
+    }
+    
+}
+
+/* For Tablets and Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .products div {
+        width: 45%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer div {
+        width: 80%;
+        text-align: center;
+    }
+
+    /* .lists-mobile{
+        display: none;
+    } */
+}
+
+/* For Larger Screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .logo img {
+        width: 120px;
+    }
+
+    .lists ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    .products div {
+        width: 22%;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .lists-mobile {
+        display: none;
+    }
+}
